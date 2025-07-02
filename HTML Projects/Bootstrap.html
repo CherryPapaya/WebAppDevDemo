@@ -8,15 +8,67 @@
     <title>Document</title>
 </head>
 <style>
-    .col {
+    [class*="col-"] {
         padding: 20px;
+    }
+
+    /* [class*="btn"] {
+        max-width: fit-content;
+    } */
+
+    [class*="btn-row"] {
+        margin: auto;
+    }
+
+    [class*="row"] {
+        padding: 5px;
     }
 </style>
 <body>
-    <div class="row">
-        <div class="col-sm-6 col-md-2 col-lg-4 col" style="background-color: aqua;"></div>
-        <div class="col-sm-3 col-md-4 col-lg-4 col" style="background-color: antiquewhite;"></div>
-        <div class="col-sm-3 col-md-6 col-lg-4 col" style="background-color: cadetblue;"></div>
+    <!-- Responsive columns. Default 12 columns, letters represent screen size, 12/number = no. of columns -->
+    <div class="row col-row">
+        <div class="col-sm-6 col-md-2 col-lg-4" style="background-color: aqua;"></div>
+        <div class="col-sm-3 col-md-4 col-lg-4" style="background-color: antiquewhite;"></div>
+        <div class="col-sm-3 col-md-6 col-lg-4" style="background-color: cadetblue;"></div>
     </div>
+
+    <br>
+
+    <!-- Basic Buttons -->
+    <!-- <div class="row btn-row d-flex gap-1"> -->
+        <button type="button" class="btn">Basic</button>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-link">Link</button>
+    <!-- </div> -->
+    <br>
+    <!-- Outline buttons -->
+    <!-- <div class="row btn-row d-flex gap-1"> -->
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+    <!-- </div> -->
+    <br>
+    <!-- Button Sizes -->
+     <!-- <div class="row btn-row d-flex gap-1"> -->
+        <button type="button" class="btn btn-primary btn-lg">Large</button>
+        <button type="button" class="btn btn-primary">Default</button>
+        <button type="button" class="btn btn-primary btn-sm">Smol</button>
+     <!-- </div> -->
+    <br>
+     <!-- Full-width button -->
+      <div class="row">
+          <button type="button" class="btn btn-primary btn-block">Full-width button</button>
+      </div>
 </body>
 </html>
