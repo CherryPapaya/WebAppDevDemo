@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
+<body>
+    <!-- Basic with Mustache style brackets -->
+    <div id="app">
+        <h1>{{ message }}</h1>
+    </div>
+
+    <script>
+        var data = { message: 'Greetings from Vue!'};
+        new Vue({
+            el: '#app',
+            data: data
+        });
+
+        /* Alternatively
+            new Vue ({
+                el: '#app',
+                data: { message: 'Greetings from Vue!'}
+            })
+        */
+    </script>
+
+    <!-- v-model -->
+    <div id="v-model">
+        <h1>{{ vModelMessage }} </h1>
+        <input v-model="vModelMessage">
+    </div>
+
+    <script>
+        new Vue ({
+                el: "#v-model",
+                data: { vModelMessage: "The Vue v-model" }
+        });
+    </script>
+
+    <!-- v-html -->
+    <!-- No need to use the mustache style brackets syntax -->
+    <div id="v-html">
+        <div v-html="vHtmlMessage"></div>
+    </div>
+
+    <script>
+        new Vue ({
+                el: "#v-html",
+                data: { vHtmlMessage: "Hello there, v-html" }
+        });
+    </script>
+
+
+    <!-- v-show -->
+    <!-- Button only shows up when there is text in the textarea -->
+    <div id="v-show">
+        <h1>You must type a message</h1>
+        <textarea v-model="message"></textarea>
+        <button v-show="message">Send message</button>
+
+        <!-- this just displays the data on the screen -->
+        <pre>
+            {{$data | json}}
+        </pre>
+    </div>
+
+    <script>
+        new Vue ({
+            el: "#v-show",
+            data: { message: "Greetings from v-model and v-show!"}
+        });
+    </script>
+</body>
+</html>
