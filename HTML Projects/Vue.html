@@ -74,5 +74,35 @@
             data: { message: "Greetings from v-model and v-show!"}
         });
     </script>
+
+    <!-- v-if -->
+    <div id="v-if">
+        <h2 v-if="isVisible">Hello there, v-if. I see you</h2>
+        <h2 v-if-else="otherVisible">Maybe</h2>
+        <h2 v-else>Goodbye there.</h2>
+    </div>
+
+    <script>
+        new Vue ({
+            el: "#v-if",
+            data: { isVisible: true,
+                otherVisible: true,
+             }
+        })
+    </script>
+
+    <!-- v-for -->
+     <div id="v-for">
+        <ul>
+            <li v-for="e in elements">{{e}}</li>
+        </ul>
+     </div>
+
+     <script>
+        new Vue({
+            el: "#v-for",
+            data: { elements : ["e1", "e2", "e3", "e4", "e5"]}
+        })
+     </script>
 </body>
 </html>
