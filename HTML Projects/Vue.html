@@ -148,5 +148,51 @@
             }
         })
      </script>
+
+    <!-- Methods -->
+    <div id="methods">
+        <h2>{{display_header()}}!</h2>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#methods",
+            data: {
+                Welcome: "Greetings from",
+                name: "Vue",
+            },
+            methods: {
+                display_header: function() {
+                    return this.Welcome + " " + this.name
+                },
+            },
+        });
+    </script>
+
+    <!-- Watchers -->
+     <div id="watchers">
+        <h1>{{ message }}</h1>
+        <button @click="change_Message()">Change the message!</button>
+     </div>
+
+     <script>
+        new Vue({
+            el: "#watchers",
+            data: {
+                message: "Greetings from the Watchers of Decay",
+            },
+            methods: {
+                change_Message: function() {
+                   this.message = "The Elder greets you now";
+                }
+            },
+            watch: {
+                message: function() {
+                    console.log(this.message);
+                }
+            }
+
+        });
+     </script>
 </body>
 </html>
